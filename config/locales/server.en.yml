@@ -1,0 +1,5 @@
+en:
+  site_settings:
+    recaptcha_enabled: 'Enable Recaptcha'
+    recaptcha_public_key: 'Recaptcha Public Key'
+    recaptcha_secret_key: 'Recaptcha Secret Key'

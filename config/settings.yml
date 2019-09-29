@@ -1,0 +1,7 @@
+plugins:
+  recaptcha_enabled:
+    default: false
+  recaptcha_public_key:
+    default: ""
+  recaptcha_secret_key:
+    default: ""
