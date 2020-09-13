@@ -1,11 +1,8 @@
 function recaptchaResponse(s){
-	let $ip = $('.user-field-recaptcha').find('input');
-	$ip.val(s);
-	$ip.change();
+	$('.user-field-recaptcha').find('input').val(s);
+	$('.user-field-recaptcha').find('input').change();
 }
 function recaptchaExpired(){
-	let $ip = $('.user-field-recaptcha').find('input');
-	
-	$ip.val('');
-	$ip.change();
+	$('.user-field-recaptcha').find('input').val('');
+	$('.user-field-recaptcha').find('input').change();
 }
