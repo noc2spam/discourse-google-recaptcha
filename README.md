@@ -20,8 +20,15 @@ In the CSS editor, enter the following rule (this is to hide the recaptcha field
     .d-modal.create-account .user-fields .user-field-recaptcha{
         display:none !important;
     }
+    // this one removes the field from edit profile in frontend. Adjust
+    // the number if you have more user fields. 
+    .form-vertical .control-group:nth-of-type(5){
+	display:none !important;
+    }
 
 Save. You should now see the re-captcha field in the registration form.
+
+
 
 
 GOTCHA: This plugin is an ugly hack by a rails newbie (read: Me). Seriously, overriding the whole create-account.hbs isn't such a good idea, I think. If that was not enough, I even had to localize the users_controller, which should not be a good idea in any MVC framework. I just did it so that I could get the captcha running without having to learn everything from scratch. To begin with, I need to know how to extend controllers in rails, lol. Hopefully, I will learn it soon. :D
