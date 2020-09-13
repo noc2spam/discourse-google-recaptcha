@@ -6,6 +6,8 @@
 
 #gem 'recaptcha', '5.1.0'
 
+register_asset "javascripts/capupdate.js"
+
 enabled_site_setting :recaptcha_enabled
 	load File.expand_path('../lib/google_recaptcha.rb', __FILE__)
 	load File.expand_path('../services/recaptcha_verifier.rb', __FILE__)
@@ -13,12 +15,12 @@ enabled_site_setting :recaptcha_enabled
 
 after_initialize do 
 	load File.expand_path('../app/controllers/recaptcha_controller.rb', __FILE__)
-
+	load File.expand_path('../app/controllers/users_controller.rb', __FILE__)
 
 	Discourse::Application.routes.append do 
-		#put '/grverify' => 'recaptcha#verify'
+		#get '/hello-world' => 'hello_world#index'
 		#mount ::RecaptchaVerifiable::recaptcha, at: "/grverify"
-		match '/grverify' => 'recaptcha#index', :via => :post
+		#match '/grverify' => 'recaptcha#index', :via => :post
 	end
 end
 

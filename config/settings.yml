@@ -3,5 +3,6 @@ plugins:
     default: false
   recaptcha_public_key:
     default: ""
+    client: true
   recaptcha_secret_key:
     default: ""
